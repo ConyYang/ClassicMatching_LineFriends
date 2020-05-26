@@ -5,11 +5,13 @@ import game_config as gc
 from lineFriends import Animal
 from findIndex import find_index
 from time import sleep
+
 pygame.init()
 display.set_caption('Line Friends Classical Matching')
 
 screen_width = 512
 screen_height = 800
+FPS = 30
 screen = display.set_mode((screen_width, screen_height))
 
 matched = image.load('transferedImage/otherAssets/matched.png')
@@ -18,6 +20,7 @@ image_info = Image.open('transferedImage/otherAssets/matched.png')
 image_width = image_info.size[0]
 image_heigt = image_info.size[1]
 # print(image_width, image_heigt)
+clock = pygame.time.Clock()
 
 running = True
 friends = [Animal(i) for i in range(0, gc.Num_Pic_Total)]
@@ -61,17 +64,17 @@ while running:
             if friends[friend_1].name == friends[friend_2].name:
                 friends[friend_1].skip = True
                 friends[friend_2].skip = True
-                sleep(0.4)
-                screen.blit(matched,(0,530))
+                screen.blit(matched, (0, 530))
                 display.flip()
-                sleep(0.4)
+                sleep(1)
                 current_friends = []
 
         if total_skipped == len(friends):
-            sleep(0.4)
             screen.blit(congrats, (0, 400))
             display.update()
-            sleep(0.4)
+            sleep(5)
             running = False
+
+    clock.tick(FPS)
 
 print("You quit the game")
