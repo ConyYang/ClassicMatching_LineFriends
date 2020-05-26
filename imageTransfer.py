@@ -10,6 +10,6 @@ path_save = "transferedImage"
 for file in img_path:
   name = os.path.join(path_save, file)
   im = Image.open(file)
-  im.thumbnail((200,200))
+  im.thumbnail((130,130))
   print(im.format, im.size, im.mode)
   im.save(name,'png')

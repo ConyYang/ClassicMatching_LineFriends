@@ -6,7 +6,7 @@ Num_Pic_Side = 4
 Num_Pic_Total = 16
 Margin = 4
 
-asset_dir = 'transferedImage/assets'
+asset_dir = 'transferedImage/OriginalImage'
 asset_files = [pictures for pictures in os.listdir(asset_dir)
                if pictures[-3:].lower() == 'png']
 # print(asset_files)
