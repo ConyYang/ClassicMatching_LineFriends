@@ -61,17 +61,17 @@ while running:
             if friends[friend_1].name == friends[friend_2].name:
                 friends[friend_1].skip = True
                 friends[friend_2].skip = True
-                # sleep(0.4)
+                sleep(0.4)
                 screen.blit(matched,(0,530))
                 display.flip()
-                # sleep(0.4)
+                sleep(0.4)
                 current_friends = []
 
         if total_skipped == len(friends):
-            # sleep(0.4)
+            sleep(0.4)
             screen.blit(congrats, (0, 400))
             display.update()
-            # sleep(0.4)
+            sleep(0.4)
             running = False
 
 print("You quit the game")

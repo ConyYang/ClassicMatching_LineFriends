@@ -5,3 +5,4 @@ venv/
 __pycache__/
 /ImageTransfer2.py
 test˚
+/test/test.py
