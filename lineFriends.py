@@ -28,10 +28,9 @@ class Animal(object):
                                                                       gc.Image_Size - 2*gc.Margin))
 
         self.box = self.friend_image_scale.copy()
-        self.box.fill((135, 206, 235))
+        self.box.fill((230, 230, 230))
 
-        self.skip = False
-
+        self.skip =False
 
 
 
